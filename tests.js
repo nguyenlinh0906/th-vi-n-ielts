@@ -22,7 +22,8 @@ Accommodation:
 2. • Book a __________ on the beach
 3. • Budge is around __________ a night
 Activities:
-• The children want to go 4.__________ – arrange for them to have a 5.__________
+• The children want to go 4.__________ 
+– arrange for them to have a 5.__________
 6. • Book a time for Susan and Jenny to play __________
 7. • Duncan wants to go __________ – send some information
 Week Two
@@ -40,20 +41,21 @@ Subscribe to the service online to receive a card
 ↓
 At the station, log on at the computer terminal
 ↓
-Select a bike by using the 11.__________
+11. Select a bike by using the __________
 ↓
-Release the bike by using the 12.__________ – of your chosen bike
+12. Release the bike by using the__________ – of your chosen bike
 ↓
-Remove the bike from the 13.__________ (You have ten seconds.)
+13. Remove the bike from the __________ (You have ten seconds.)
 ↓
-Make sure you have a 14.__________ before setting off
+14. Make sure you have a __________ before setting off
 ↓
 At the end of your journey, return the bike to a station and secure in place
-(A 15.__________ – will tell you the bike is locked correctly)
+15. (A __________ – will tell you the bike is locked correctly)
 Question 16-20 
 Lable the plan below. 
 Choose the correct letter, A-H, next to questions 16-20. 
 *(Xem hình ảnh sơ đồ bên trên / đi kèm để làm bài)*
+![Sơ đồ bài nghe](https://raw.githubusercontent.com/nguyenlinh0906/th-vi-n-ielts/main/Anh%20chup%20man%20hinh%202026-10-12%20102218.png)
 @opts A. | B. | C. | D.| E. | F. | G. | H. 
 16.  Coffee cart
 17.  Workshop
@@ -66,21 +68,22 @@ Questions 21–23
 Complete the notes below.
 Write ONE WORD ONLY for each answer.
 Products using renewable energy sources
-a) Kites produced by German company
+21. a) Kites produced by German company
 are attached to ships by long cables
-can use wind power in any 21.__________
+can use wind power in any __________
 could reduce toxic emissions by 50%
-b) Sports car produced by US company
-uses 22.__________ as a power source
+22. b) Sports car produced by US company
+uses __________ as a power source
 will have zero emissions
-c) Ethanol stoves produced in South Africa
-are safer than paraffin stoves as less likely to 23.__________
+23. Ethanol stoves produced in South Africa
+are safer than paraffin stoves as less likely to __________
 Questions 24–25
 Choose TWO correct answers.
 24–25 Who will Sylvia and Greg ask to take part in the survey?
 @opts A.companies | B. lecturers | C. local residents | D. schoolchildren | E. university students
 24.
-25. 
+25.
+PART 3
 Questions 26–30
 Choose the correct answer.
 26. What does Sylvia say about people's knowledge of renewable energy?
@@ -110,20 +113,20 @@ Write ONE WORD ONLY for each answer.
 Absence from work
 Absence may be frequent or occasional.
 Main factors involved
-• a the 31.__________ of employees (e.g. females are likely to have responsibility for children)
-• employees’ 32._________ (but the evidence is inconclusive)
-• the 33.__________ of the organization (absenteeism may be acceptable)
-• the type of work (higher absence among employees in 34.__________)
-• the 35.__________ of an employees work group
+31. • a the 31.__________ of employees (e.g. females are likely to have responsibility for children)
+32. • employees’ 32._________ (but the evidence is inconclusive)
+33. • the 33.__________ of the organization (absenteeism may be acceptable)
+34. • the type of work (higher absence among employees in 34.__________)
+35. • the 35.__________ of an employees work group
 Public sector versus private sector
 Public sector has higher absence levels
-Possible explanation – the public sector is less 36.__________
-Systems may be more bureaucratic because of 37.__________ factors (e.g. state controls)
+36. Possible explanation – the public sector is less 36.__________
+37. Systems may be more bureaucratic because of 37.__________ factors (e.g. state controls)
 More recent literature suggests public sector organisations usually
-• have a 38.__________ workforce
+38. • have a 38.__________ workforce
 • have more female and more older employees
-• provide 39.__________ for longer, with fewer restrictions
-• are less likely to 40.__________ employer
+39. • provide 39.__________ for longer, with fewer restrictions
+40. • are less likely to 40.__________ employer
 [ANSWERS]
 1. NG
 2.T
