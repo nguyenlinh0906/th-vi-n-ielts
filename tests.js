@@ -2,6 +2,415 @@
 // Thêm đề mới: dán khối mới ngay TRƯỚC dấu ] ở cuối file (trong trang: Thư viện đề > Dán đề của riêng bạn > Tạo mã).
 // type: 'reading' hoặc 'listening'. mins: số phút. audio: tên file mp3 để cùng thư mục (chỉ Listening, tùy chọn).
 window.TESTS=[
+  {id:"listening 3",title:"Listening t3 ( Có ảnh & Audio)",type:"listening",mins:40,
+audioUrl: https://drive.google.com/drive/folders/1LEsxHcPq3jshst46LmhqfzlE4twR3R_0, 
+imageUrl: https://github.com/nguyenlinh0906/th-vi-n-ielts/blob/main/A%CC%89nh%20chu%CC%A3p%20ma%CC%80n%20hi%CC%80nh%202026-10-12%20102218.png,
+raw:`[QUESTIONS]
+SECTION 1
+Read the text and answer questions 1–10
+Questions 1–10
+Complete the notes below.
+Write ONE WORD AND/OR A NUMBER for each answer.
+Beach Heads Travel
+Customer Request Sheet
+Example
+Name: Duncan White
+Group details: three adults and two children
+1. Date of arrival: __________ (staying for 2 weeks)
+Week One
+Accommodation:
+2. • Book a __________ on the beach
+3. • Budge is around __________ a night
+Activities:
+• The children want to go 4.__________ – arrange for them to have a 5.__________
+6. • Book a time for Susan and Jenny to play __________
+7. • Duncan wants to go __________ – send some information
+Week Two
+8. Accommodation: National Park- book a __________ ($100 per night)
+Activities:
+9. • Arrange a __________ for Jenny
+10. • Send Duncan a __________ for Marco’s
+SECTION 2
+Questions 11–15
+Complete the flow-chart below.
+Choose FIVE correct answers, A–I, next to the questions 11–15.
+@opts A. button| B. website | C. helmet | D. light | E. locker | F. password | G. rack | H. screen | I. sound 
+How to use City Cycle
+Subscribe to the service online to receive a card
+↓
+At the station, log on at the computer terminal
+↓
+Select a bike by using the 11.__________
+↓
+Release the bike by using the 12.__________ – of your chosen bike
+↓
+Remove the bike from the 13.__________ (You have ten seconds.)
+↓
+Make sure you have a 14.__________ before setting off
+↓
+At the end of your journey, return the bike to a station and secure in place
+(A 15.__________ – will tell you the bike is locked correctly)
+Question 16-20 
+Lable the plan below. 
+Choose the correct letter, A-H, next to questions 16-20. 
+*(Xem hình ảnh sơ đồ bên trên / đi kèm để làm bài)*
+@opts A. | B. | C. | D.| E. | F. | G. | H. 
+16.  Coffee cart
+17.  Workshop
+18.  Lockers
+19.  Showers
+20.  Towel
+SECTION 3
+Read the text and answer questions 21–30
+Questions 21–23
+Complete the notes below.
+Write ONE WORD ONLY for each answer.
+Products using renewable energy sources
+a) Kites produced by German company
+are attached to ships by long cables
+can use wind power in any 21.__________
+could reduce toxic emissions by 50%
+b) Sports car produced by US company
+uses 22.__________ as a power source
+will have zero emissions
+c) Ethanol stoves produced in South Africa
+are safer than paraffin stoves as less likely to 23.__________
+Questions 24–25
+Choose TWO correct answers.
+24–25 Who will Sylvia and Greg ask to take part in the survey?
+@opts A.companies | B. lecturers | C. local residents | D. schoolchildren | E. university students
+24.
+25. 
+Questions 26–30
+Choose the correct answer.
+26. What does Sylvia say about people's knowledge of renewable energy?
+A. Many people know little about it.
+B. People understand it because it has been in the news recently
+C. People are eager to find out more about it
+27. What do Sylvia and Greg decide to ask about traditional energy consumption?
+A. the best way of preventing pollution
+B.possible future developments
+C.how expensive people find it
+28. What does Greg say about nuclear power?
+A. It is not important for their survey
+B. People today have a positive attitude towards it.
+C. Some people think it is unsafe
+29. What do Sylvia and Greg agree about the cost of renewable energy ?
+A. Prices will drop in the future
+B. People won't pay the high price
+C. The benefits outweigh the high cost
+30. Sylvia and Greg agree that modern windmills
+A. are the most efficient way of harnessing energy
+B. should be put in carefully selected locations
+C. make the landscape look unattractive
+
+Questions 31–40
+Complete the notes below.
+Write ONE WORD ONLY for each answer.
+Absence from work
+Absence may be frequent or occasional.
+Main factors involved
+• a the 31.__________ of employees (e.g. females are likely to have responsibility for children)
+• employees’ 32._________ (but the evidence is inconclusive)
+• the 33.__________ of the organization (absenteeism may be acceptable)
+• the type of work (higher absence among employees in 34.__________)
+• the 35.__________ of an employees work group
+Public sector versus private sector
+Public sector has higher absence levels
+Possible explanation – the public sector is less 36.__________
+Systems may be more bureaucratic because of 37.__________ factors (e.g. state controls)
+More recent literature suggests public sector organisations usually
+• have a 38.__________ workforce
+• have more female and more older employees
+• provide 39.__________ for longer, with fewer restrictions
+• are less likely to 40.__________ employer
+[ANSWERS]
+1. NG
+2.T
+3. T
+4.F
+5.NG
+6.F
+Câu số 7.
+operator
+Câu số 8. 
+confidence
+Câu số 9. 
+disappointment
+Câu số 10. 
+president
+Câu số 11. 
+listening
+Câu số 12. 
+vision
+Câu số 13. 
+heart
+Câu số 14. 
+D
+Câu số 15. 
+F
+Câu số 16. 
+D
+Câu số 17. 
+A
+Câu số 18. 
+C
+Câu số 19.
+B
+Câu số 20. 
+C
+Câu số 21. 
+A
+Câu số 22.
+D
+Câu số 23. 
+A
+Câu số 24.
+storytellers
+Câu số 25.
+peer
+Câu số 26. 
+affection
+Câu số 27. 
+C
+Câu số 28.
+C
+Câu số 29. 
+A
+Câu số 30. 
+D
+Câu số 31. 
+B
+Câu số 32. 
+NO
+Câu số 33. 
+NOT GIVEN
+Câu số 34. 
+NO
+Câu số 35. 
+YES
+Câu số 36. 
+D good condition
+Câu số 37. 
+B random collection
+Câu số 38.
+C similar properties
+Câu số 39.
+H reliable connection
+Câu số 40.
+J immediate surroundings
+`}
+  {id:"reading-test-4",title:"Reading Test 4 – The Pixar Story / A Mechanical Friend for Children / The Peopling of Patagonia",type:"reading",mins:60,raw:`[PASSAGE]
+PASSAGE 1
+ 
+Read the text and answer questions 1–13
+ 
+The Pixar Story
+ 
+The animation studio Pixar has experienced a number of challenges in its short history
+ 
+A Between 2000 and 2005, under former Chief Executive Officer (CEO) Michael D. Eisner, Walt Disney Company set its shareholder meetings in a series of cold-weather cities during cold-weather months. Many suspected that this had been to discourage attendance by the company's increasingly restless shareholders. In 2006, however, there was no need for such measures. In October 2005, Chief Operating Officer Robert Iger had replaced Eisner as CEO. On taking charge, Iger had quickly carried out a bold stroke, negotiating a buyout of Pixar Animation Studios. Although the price was high, the acquisition proved to be overwhelmingly popular.
+ 
+B Pixar had started life twenty years earlier as Pixar Inc., a computer hardware company, one of hundreds dotting the landscape of the San Francisco Bay Area in California. Within the company, a tiny animation group made short promotional films that brought in practically zero revenue; the group came close more than once to being shut down. When the Pixar Image Computer proved unprofitable, the company turned to selling animation software and making animated commercials, but it kept losing money year after year.
+ 
+C In 1991, when Disney agreed to finance the production of Pixar's first feature film for cinema release, Disney had virtually dictated the terms of the contract. In late 1993, Disney considered ordering Pixar to shut down production of the John Lasseter directed film, Toy Story, on account of issues with the script. At the time, Hollywood commentators doubted whether audiences would even sit through a full-length film in the new medium of computer animation. It was unclear whether computer animation would prove to be a novelty that would quickly wear thin.
+ 
+D Before long, however, things had changed dramatically. A succession of beloved and commercially successful animated feature films, starting with the 1995 release of Toy Story and including A Bug's Life and Finding Nemo, made Pixar the world's dominant animation studio. Disney made a fortune distributing the films. When Pixar's majority owner and CEO, Steve Jobs, cut off contract talks with Disney in early 2004, as the end of their distribution contract was in sight, the business press focused on the question of how Disney would cope. By then, it was Disney that seemed to need Pixar - the distribution of Pixar's films made up around 45% of the operating income from Disney's film operations. Disney's internal market research showed that mothers of young children trusted the Pixar brand more than Disney's.
+ 
+E With the 2005 acquisition, John Lasseter was soon to hold the titles of Chief Creative Officer for Disney and Pixar animation and Principal Creative Advisor for Disney's worldwide theme parks and resorts. Having created a new genre of film with his colleagues at Pixar, Lasseter had been able to make the films he wanted to make, and he was coming back to Disney on his own terms, having briefly been an employee there when he was young.
+ 
+F When Iger brought Lasseter on to speak at the 2006 shareholders' meeting, Lasseter was met with energetic applause as the sound system played a few bars of the signature song of Toy Story. In his speech, Lasseter recalled afternoons as a schoolboy running home to catch Bugs Bunny cartoons on TV. It wasn't long, he told the audience, before he realized he wanted to earn a living from making cartoons. He went on to talk about working on the Jungle Cruise ride in Disneyland, and the terrible jokes that he and his fellow operator told to enliven the show. He said the experience had brought him out of his shell and given him confidence in front of people. He also explained how he joined Disney's animation division fresh out of the California Institute of the Arts, and saw one of the early trials of 3-D computer animation. He mentioned the disappointment he had felt as a young man in trying, and failing, to get the Disney studio to embrace the new technology. Keeping his presentation upbeat, he said simply, 'So I followed my dream to work with one of the most amazing people I've ever known in my life - Ed Catmull.'
+ 
+G The sixty-one-year-old president of Pixar, Dr. Edwin Catmull, was seated amongst the shareholders. Catmull has been a computer graphics researcher who had fallen accidentally into the role of business leader. Those who knew him well invariably described him as brilliant, but his intelligence was not the kind that advertised itself by dominating conversations; by and large, he was keener on listening than talking. When he did speak, his words were friendly and polite.
+ 
+H While Catmull had built upon the work of others, the revolution in 3-D animation was in many respects his revolution. It was Catmull who had held to his vision of fully computer-animated movies. And it was Catmull, while running computer graphics labs at the New York Institute of Technology and George Lucas's Lucasfilm, who had assembled the technical and creative staff that would go on to become the heart of Pixar Animation Studios.
+ 
+[QUESTIONS]
+Questions 1–6
+Choose TRUE if the statement agrees with the information given in the text, choose FALSE if the statement contradicts the information, or choose NOT GIVEN if there is no information on this.
+1. Robert Iger had a low opinion of Michael D. Eisner.
+2. Pixar Inc. had extremely limited financial success in its early years.
+3. There were difficulties during the production of the film Toy Story.
+4. In the early 1990s, Hollywood commentators were convinced animated films had a promising future.
+5. Finding Nemo was more popular than Toy Story.
+6. In 2004, Pixar contributed little to Disney's income from its film operations.
+Questions 7–13
+Complete the notes below. Write ONE WORD ONLY from the passage for each answer.
+Lasseter and Catmull – a professional success story
+John Lasseter
+Was keen on watching Bugs Bunny cartoons when he was a schoolboy.
+7. Worked as a ride ___ at Disneyland.
+8. The Disneyland job increased his ___.
+Attended California Institute of the Arts.
+9. Suffered ___ over rejection of new technology by Disney studio.
+Ed Catmull
+10. Was Pixar's ___ at the time of the shareholder meeting in 2006.
+11. Preferred ___ to taking control of conversations.
+12. Did not let go of his ___ for computer animated films.
+Ran various computer graphics laboratories.
+13. Brought together the various teams on which the ___ of Pixar would be founded.
+ 
+[ANSWERS]
+1. NOT GIVEN
+2. TRUE
+3. TRUE
+4. FALSE
+5. NOT GIVEN
+6. FALSE
+7. operator
+8. confidence
+9. disappointment
+10. president
+11. listening
+12. vision
+13. heart
+ 
+[PASSAGE]
+PASSAGE 2
+ 
+Read the text and answer questions 14–26
+ 
+A mechanical friend for children
+ 
+A. The development of robots that interact socially with people and assist them in everyday life has been an elusive goal of modern science. Despite impressive advances in the mechanical aspects of this problem, producing robots that bond and socialize with people for sustained periods of time has proven difficult. The most successful robots so far have been storytellers, but they have only been able to maintain human interest for a limited time and typically rely on the robot telling stories that change over time. In practice, commercially available robots seldom cross the 10-hour barrier (i.e. individual users tend to spend less than a combined total of 10 hours with the robots before losing interest). This observation is in sharp contrast to the long-term interactions and bonding that commonly develop between humans and their pets.
+ 
+B. In a recent study, researchers from the Institute for Neural Computation in California introduced a state-of-the-art social robot into a classroom of 18- to 24-month-olds for five months as a way of studying human/robot interactions. The researchers, including Fumihide Tanaka and Javier R Movellan, introduced a toddler-sized humanoid robot into a classroom at a childhood education center. One of the QRIO series of robots, the 58cm machine, was originally developed by Sony. Children of toddler age were chosen because they have no preconceived notions of robots, according to Tanaka. One of the goals of the study was to establish whether it was possible for social robots to maintain the interest of children beyond the 10-hour barrier.
+ 
+C. The researchers sent instructions to the robot about every two minutes to do things like giggle, dance, sit down, fall down or walk in a certain direction. The 45 sessions were videotaped, and interactions between toddlers and the robot were later analyzed. The results showed that the quality of those interactions improved steadily over 27 sessions. The interactions deteriorated quickly over the next 15 sessions, when the robot was ordered to behave in a more limited, predictable manner. Finally, the human/robot relations improved in the last three sessions, after the robot had been instructed to display its full range of behaviors.
+ 
+D. 'Initially the children treated the robot very differently from the way they treated each other,' Tanaka said. 'Early in the study some children cried when QRIO fell. But a month into the study, the toddlers helped QRIO stand up by pushing its back or pulling its hands.' The most important aspect of interaction was touch, Tanaka said. At first the toddlers would touch the robot on its face, but later on they would touch it only on its hands and arms, like they would with other humans. Another robot-like toy named Robby, which resembled QRIO but did not move, was used as a control in the study. While hugging of QRIO increased, hugging of Robby decreased throughout the study. Furthermore, when QRIO laid down on the floor as its batteries ran down, a toddler would put a blanket over his silver-colored 'friend' and say 'night-night'. Care-taking behaviors were frequently observed toward QRIO but seldom toward Robby.
+ 
+E. The study concluded that after 45 days of immersion in a childcare center over a period of five months, long-term bonding and socialization occurred between toddlers and a state-of-the-art social robot. Overall, the interaction between children and the robot improved over time and the children progressively treated it more as a peer than a plaything. 'To my knowledge, this is the first long-term study of this sort,' said Ronald Arkin, a roboticist at the Georgia Institute of Technology in the US.
+ 
+F. Tanaka and Movellan are now developing autonomous robots for the toddler classroom. 'It could have great potential in educational settings assisting teachers and enriching the classroom environment,' Tanaka said. The researchers hope that more advanced versions of robots like QRIO could become personalized tutors to assist teachers in classrooms. A robotic tutor could react on the spot to social cues and approximate social skills like facial expression and eye gaze, they said. 'It is becoming clear that, to achieve this goal, we are going to [need to] endow machines with something similar to emotion, not just traditional forms of intelligence,' said Movellan.
+ 
+G. Associate professor David Powers, an expert in artificial intelligence and cognitive science at Flinders University in South Australia, commented, 'In this study it is clearly demonstrated that limited range of robot behaviors, however impressive, is nowhere near as important to human/robot interaction as being able to make appropriate responses from a broad repertoire of behaviors'. Ronald Arkin was not surprised by the affection demonstrated by the toddlers toward the robot. 'Humans have a tremendous propensity to bond with artifacts, whether it be a car, a doll, or a robot,' he said. But he also cautioned that researchers do not yet understand the consequences of increased human/robot interaction. 'Studying how robots and humans work together can give us insight into whether this is a good thing or a bad thing for society,' Arkin said. 'We need to find out what the consequences are of introducing a robot into a cadre of children. How will that enhance, or potentially interfere with, their social development? Do we really understand the long-term impact of having a robot as a childhood friend?'
+ 
+[QUESTIONS]
+Questions 14–18
+Reading Passage 2 has seven paragraphs, A–G. Which paragraph contains the following information? You may use any letter more than once.
+@opts A. Paragraph A | B. Paragraph B | C. Paragraph C | D. Paragraph D | E. Paragraph E | F. Paragraph F | G. Paragraph G
+14. a comparison of children's reactions towards different robots
+15. a speculation about ways robots may be able to communicate
+16. a description of changes in the way the children physically handled a robot
+17. a comparison between people's connections with animals and their connections with robots
+18. an account of the way one robot was programmed
+Questions 19–23
+Look at the following statements and the list of people below. Match each statement with the correct person, A–D. You may use any letter more than once.
+@opts A. Fumihide Tanaka | B. Javier R Movellan | C. Ronald Arkin | D. David Powers
+19. In future, robots will not only have to think, but also to show feelings.
+20. It is uncertain whether more contact between people and robots will be beneficial.
+21. Very young children have not yet developed ideas about robots.
+22. Robots need to perform a wide variety of actions for people to relate to them.
+23. Using robots as an aid in schools may have many benefits.
+Questions 24–26
+Complete the sentences below. Write ONE WORD ONLY from the passage for each answer.
+24. Until recently, robots that were best at holding people's attention were those that acted as ___.
+25. The children responded to the QRIO robot as a friend or ___, rather than as a toy.
+26. Arkin expected that the children would show ___ towards the QRIO robot.
+ 
+[ANSWERS]
+14. D
+15. F
+16. D
+17. A
+18. C
+19. B
+20. C
+21. A
+22. D
+23. A
+24. storytellers
+25. peer
+26. affection
+ 
+[PASSAGE]
+PASSAGE 3
+ 
+Read the text and answer questions 27–40
+ 
+The peopling of Patagonia
+ 
+Anthropologists continue to investigate human migration to Patagonia at the southern tip of South America
+ 
+A. The human settlement of the southern extremity of the Americas has always fascinated pre-historians. Viewed from a global perspective, this was the last major continental land mass to be reached by human beings. The earliest occupation of Patagonia carries obvious implications for understanding when the North and South American continents were peopled, because it gives a baseline that all calculations regarding the rate of dispersion of humans throughout both continents must take into account.
+ 
+B. For many years the human settlement of North and South America has been conceived of as beginning in the far north and travelling progressively southwards to Patagonia. However, fundamental disagreements developed concerning the length of time involved. Some scholars accepted a human presence in the Americas as early as 20,000 years ago, while others proposed that it could date no earlier than 8,000 years ago, and the debate is still with us today.
+ 
+C. The idea of a relatively 'late' settlement of the Americas (around 8,000 years ago) implies that a rapid process of migration took place. Herein lies a second debate which revolves around the question of how migration is to be understood. The 'late' model demands a hypothetical migration conceived of as a single continually advancing wave of settlement. This has always been difficult to take seriously and many scholars now support the idea of an 'early' model that sees the migration as a less ordered migration, and this is surely the most realistic scenario as migrants slowly adapted to the diverse natural habitats they would have met while travelling through the continent.
+ 
+D. Those who argue for an earlier settlement, however, must contend with the lack of unequivocal evidence for archaeological sites older than around 14,000 years. Nevertheless, evidence for human occupation of the centre of South America is now securely dated to around 12,500 years ago at the Monte Verde site, which casts doubt on the 'late' model. The lack of archaeological evidence further south for this time period may be explained by the obstacle to humans on foot posed by the huge glacial streams that were present at that time.
+ 
+E. We can speculate then that the retreat of the Patagonian glaciers around 14,000 years ago allowed the initial human intrusion into a pristine environment, which was similar to that of early post-glacial Europe. Human settlement of the vast horizontal expanse of treeless high country must have been tenuous at best, and the evidence for this occupation remains relatively scant, most of it coming from rock shelters in Argentina and Chile. There is, however, reliable evidence from these sites to confirm the presence of humans by around 11,000 years ago in different habitats and some hints of an even older occupation. However, some other sites where evidence for even earlier human occupation was initially posited, have recently come under fresh scrutiny. This is because anthropologists have come to recognise that bones or other evidence may be deposited in caves by natural agency, in other words by other forces such as floods or predators, and not necessarily by humans.
+ 
+F. We shall turn now to a more detailed discussion of the archaeological evidence found in various parts of Patagonia. At the site located beside Chinchihuapi Creek, excavations have produced convincing evidence of human occupation, including hut foundations and wooden artefacts. They were buried in layers of peat, which has the property of preserving wood remarkably well, and as a result radiocarbon dating* tests have shown these artefacts to date from around 12,500 years ago. One of the most famous Patagonian sites is a cave known as Los Toldos. However, the evidence from this site has recently been called into question, because dispersed flecks of carbon used in the test process were taken unsystematically from many different places in the site. As a result, the association of this material with the artefacts is not at all clear. About 150 kilometres south is the site called El Ceibo, where a similar collection of artefacts to that found at Los Toldos has been discovered from the lowest levels of the dig, but as yet no radiocarbon dates are available and this sort of analysis of the existing evidence is required before the site's value can be confirmed.
+ 
+G. The Arroyo Feo site is located very close to the high plateau. The artefacts from the earliest occupations were found at the same depth and have the same origins as those from Los Toldos, and have been securely dated to around 9,000 years ago. Another site that is mentioned in the debate is at Las Buitreras, where a number of stone flakes associated with bone remains of various animals have been discovered. However, anthropologists now believe that presumed cut marks on the bones are somewhat dubious, and despite detailed testing there is no way of securely relating any of these remains with human occupation. Finally some 50 kilometres to the south is the site at Cueva Fell, which was the first Patagonian site to be systematically studied by modern archaeological methods. However, it is now recognised that the utility of this site must be restricted to its direct vicinity, given changes to the nearby area caused by flooding, and findings cannot be freely extrapolated further afield.
+ 
+H. In conclusion, based on the evidence from a number of reliable sites, it seems probable that human populations reached Patagonia around 11,000 years ago.
+ 
+*radiocarbon dating: finding out the age of an organic object by examining carbon it contains
+ 
+[QUESTIONS]
+Questions 27–31
+Choose the correct answer.
+27. In the first paragraph, what is the writer's main point about migration to Patagonia?
+A. It started earlier than previously thought.
+B. Historians have overlooked its importance.
+C. It impacts on research into the wider region.
+D. Researchers have calculated its effects on the environment.
+28. In the second paragraph, what is the writer's purpose?
+A. to challenge previous research
+B. to propose new areas to investigate
+C. to summarise a scholarly debate
+D. to suggest reasons for human migration
+29. The writer refers to the 'late' model in order to
+A. compare it with another theory of migration.
+B. evaluate the success of American migration.
+C. criticise the speed of research into migration.
+D. compare migration in different parts of the world.
+30. What is the writer's main point about the 'early' model?
+A. Scholars support the idea of fast migrations.
+B. It is too random to be convincing theory.
+C. South America was more habitable at an earlier time.
+D. It is more consistent with the physical conditions of the land.
+31. What does the writer suggest about the Monte Verde site?
+A. It is much younger than researchers once estimated.
+B. It provides supporting evidence for relatively early settlement.
+C. Archaeologists believe the site is of questionable value.
+D. Streams exposed the site, making new research possible.
+Questions 32–35
+Choose YES if the statement agrees with the claims of the writer, choose NO if the statement contradicts the claims of the writer, or NOT GIVEN if it is impossible to say what the writer thinks about this.
+32. The conditions encountered by the first migrants to Patagonia were unique.
+33. In the high country the first migrants hunted wild animals for food.
+34. Archaeologists have failed to draw conclusions from the evidence found at rock shelters in Argentina and Chile.
+35. Archaeological evidence can be moved from place to place in a variety of ways.
+Questions 36–40
+Complete the summary using the list of words, A–J, below.
+The archaeological evidence from Patagonia
+@opts A. fixed date | B. random collection | C. similar properties | D. good condition | E. scientific evaluation | F. huge quantities | G. new samples | H. reliable connection | I. skilled preservation | J. immediate surroundings
+36. Building remains and other evidence have been found in ___ at the Chinchihuapi Creek site, and because of this it has been possible to date them to around 12,500 years ago.
+37. However, the ___ of the sample taken from Los Toldos means that this site is of doubtful value. El Ceibo is a more promising dig, where the examination of artefacts would be beneficial in order to confirm the usefulness of discoveries there.
+38. The remains found at the Arroyo Feo site show ___ and date from around 9,000 years ago.
+39. Unfortunately, no ___ can be made between the samples taken from Las Buitreras and human presence.
+40. The findings of the work carried out at Cueva Fell cannot provide useful information beyond the ___. In conclusion, though the evidence is mixed, it is believed that human population of Patagonia began about 11,000 years ago.
+ 
+[ANSWERS]
+27. C
+28. C
+29. A
+30. D
+31. B
+32. NO
+33. NOT GIVEN
+34. NO
+35. YES
+36. D
+37. B
+38. C
+39. H
+40. J
+`},
   {id:"reading-test-3",title:"Reading Test 3 – Chicken / Introvert & Extrovert / Synesthesia",type:"reading",mins:60,raw:`[PASSAGE]
 PASSAGE 1
  
