@@ -3,9 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Thư viện đề IELTS</title>
+<title>Thư viện đề thi IELTS</title>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<!-- Thêm thư viện Chart.js để vẽ biểu đồ -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
 :root{--bg:#e9ecf0;--panel:#fff;--bgs:#f1f3f6;--ink:#1c2430;--mute:#6b7685;--line:#d5dbe3;--acc:#b3122b;--ok:#1f9d63;--flag:#f2b705;--hl1:#ffe45c;--hl2:#a6efb5;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1217;--panel:#171c23;--bgs:#222a34;--ink:#e6e9ee;--mute:#8d97a5;--line:#2a323d;--acc:#e0455b;--hl1:#d9b800;--hl2:#4fbf6b;color-scheme:dark}}
@@ -21,9 +23,7 @@ header{background:var(--panel);border-bottom:3px solid var(--acc)}
 .doc{font-family:'Newsreader',Georgia,serif;font-size:1.13rem;line-height:1.8;max-width:68ch;margin:0 auto;padding:2rem 2.2rem}
 .doc h2{font-size:1.6rem;font-weight:600;margin:0 0 1rem}
 .doc p{margin:0 0 1rem}
-mark.y{background:var(--hl1);color:#111}
-mark.g{background:var(--hl2);color:#111}
-mark.nt{background:#bfdcff;color:#111;border-bottom:2px dotted #2563eb;cursor:pointer}
+mark.y{background:var(--hl1);color:#111} mark.g{background:var(--hl2);color:#111} mark.nt{background:#bfdcff;color:#111;border-bottom:2px dotted #2563eb;cursor:pointer}
 #tb{position:fixed;display:none;gap:4px;padding:5px;background:#1c2430;border-radius:8px;z-index:40;box-shadow:0 6px 20px rgba(0,0,0,.35)}
 #tb button{color:#fff;font-size:12px;padding:4px 8px;border-radius:5px;display:flex;align-items:center;gap:5px;cursor:pointer}
 #tb button:hover{background:#38475a}
@@ -49,7 +49,7 @@ mark.nt{background:#bfdcff;color:#111;border-bottom:2px dotted #2563eb;cursor:po
 .fb{flex:none;align-self:flex-start;font-size:18px;color:var(--mute);cursor:pointer;padding:0 .3rem}
 .fb.on{color:var(--flag)}
 #dlg{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:60;padding:1rem}
-.box{background:var(--panel);width:100%;max-width:52rem;max-height:92vh;overflow:auto;border-radius:12px;padding:1.5rem}
+.box{background:var(--panel);width:100%;max-width:56rem;max-height:92vh;overflow:auto;border-radius:12px;padding:1.5rem}
 .rv{margin-top:.8rem;padding-top:.6rem;border-top:1px dashed var(--line);font-size:14px}.rex{display:none;margin-top:.5rem;padding:.6rem .8rem;background:var(--bgs);border-radius:6px}.rex.open,.show-rex .rex{display:block}.hide-rans .rans{display:none}.q.rok{border-color:var(--ok)}.q.rbad{border-color:var(--acc)}
 .ex{display:none}.ex.open,.showex .ex{display:table-row}.hide-ans .ca{visibility:hidden}
 table{width:100%;border-collapse:collapse;font-size:14px}
@@ -67,18 +67,6 @@ td,th{padding:.4rem .6rem;border-bottom:1px solid var(--line);text-align:left}
 .tile small{display:block;opacity:.8;margin-bottom:.35rem}
 .tile em{display:inline-block;font-style:normal;font-size:12px;background:rgba(255,255,255,.7);padding:.1rem .55rem;border-radius:99px}
 .lempty{color:var(--mute);font-size:14px;margin:0}
-/* ===== PASTEL ===== */
-:root,:root:not([data-theme="light"]){--bg:#f3effa;--panel:#ffffff;--bgs:#f7f3fc;--ink:#3b3550;--mute:#7d7794;--line:#e3dcf0;--acc:#d9778f;--ok:#8fd3b6;--flag:#ffd98a;--hl1:#fff0a8;--hl2:#bff0cf;color-scheme:light}
-:root[data-theme="dark"]{--bg:#2a2540;--panel:#352f4f;--bgs:#40395e;--ink:#efeaff;--mute:#b3aad0;--line:#4d4570;--acc:#f0a1b6;--ok:#6cc3a0;--flag:#f5cf7a;--hl1:#c9b44a;--hl2:#5fb98a;color-scheme:dark}
-header{border-bottom-color:#cdb8f0}
-#dlg{background:rgba(120,100,160,.35)}
-.pri{color:#3b2a38}
-.nb.ok{color:#14402c}
-.nb.fl{color:#4a3500}
-.num{background:#9d8bd6;color:#fff}
-.btn,.op,.ti,#np{border-radius:12px}
-.q,.box{border-radius:16px}
-#tb{background:#4b4466}
 
 /* ===== NỀN HỒNG PASTEL + HÌNH DỄ THƯƠNG ===== */
 :root,:root:not([data-theme="light"]){--bg:#ffeaf2;--panel:#ffffff;--bgs:#fff4f8;--ink:#4a3548;--mute:#8e7384;--line:#f6d3e1;--acc:#ec7fa3;--ok:#8fd3b6;--flag:#ffd98a;color-scheme:light}
@@ -101,18 +89,21 @@ header{border-bottom-color:#ffbcd3}
 </style>
 </head>
 <body>
-
 <div id="app">
   <header class="flex items-center justify-between px-5 h-14">
     <div class="flex items-center gap-3">
-      <div class="font-semibold text-xl tracking-tight" style="color:var(--acc)">IELTS</div>
-      <div class="text-sm"><div id="who" class="font-medium"></div><div style="color:var(--mute)"><span id="badge"></span> · Computer-delivered</div></div>
+      <div class="font-semibold text-xl tracking-tight cursor-pointer" style="color:var(--acc)" onclick="openLib()">IELTS</div>
+      <div class="text-sm">
+        <div id="who" class="font-medium"></div>
+        <div style="color:var(--mute)"><span id="badge"></span> · Computer-delivered</div>
+      </div>
     </div>
     <div class="flex items-center gap-2">
       <span id="clock" class="text-2xl font-semibold tabular-nums" style="min-width:5.5rem;text-align:center">--:--</span>
       <button class="btn" id="tg" title="Ẩn/hiện đồng hồ">Ẩn giờ</button>
     </div>
     <div class="flex items-center gap-2">
+      <button class="btn" id="homeBtn">Trang chủ</button>
       <button class="btn" id="theme">Sáng/Tối</button>
       <button class="btn" id="set">Thư viện đề</button>
       <button class="btn pri" id="sub">Nộp bài</button>
@@ -122,8 +113,10 @@ header{border-bottom-color:#ffbcd3}
     <section id="left" class="pane w-1/2" style="border-right:1px solid var(--line)"></section>
     <section class="w-1/2 flex flex-col min-h-0" style="background:var(--bg)">
       <div class="navp">
-        <div class="flex items-center justify-between mb-2"><b id="prog" class="text-sm"></b>
-          <span class="flex gap-3"><span class="leg"><i style="background:var(--ok)"></i>Đã trả lời</span><span class="leg"><i style="background:var(--bgs)"></i>Chưa trả lời</span><span class="leg"><i style="background:var(--flag)"></i>Xem lại</span></span></div>
+        <div class="flex items-center justify-between mb-2">
+          <b id="prog" class="text-sm"></b>
+          <span class="flex gap-3"><span class="leg"><i style="background:var(--ok)"></i>Đã trả lời</span><span class="leg"><i style="background:var(--bgs)"></i>Chưa trả lời</span><span class="leg"><i style="background:var(--flag)"></i>Xem lại</span></span>
+        </div>
         <div id="nav" class="flex flex-wrap gap-1.5"></div>
         <div class="flex items-center gap-2 mt-3"><button class="btn" id="prev">‹ Trước</button><button class="btn" id="next">Sau ›</button><span class="text-xs ml-2" style="color:var(--mute)">Alt+← / Alt+→ chuyển câu · Alt+F đánh dấu</span></div>
       </div>
@@ -131,55 +124,35 @@ header{border-bottom-color:#ffbcd3}
     </section>
   </main>
 </div>
+
 <div id="tb"><button data-a="y"><i class="dot" style="background:#ffe45c"></i>Vàng</button><button data-a="g"><i class="dot" style="background:#6fdc8c"></i>Xanh</button><button data-a="n">Add Note</button><button data-a="c">Xóa highlight</button></div>
 <div id="np"><textarea id="nt" rows="4" placeholder="Ghi chú của bạn..."></textarea><div class="flex justify-between mt-2"><button class="btn" id="ndel">Xóa</button><button class="btn pri" id="nclose">Xong</button></div></div>
 <div id="dlg"></div>
 
-
 <script src="tests.js" charset="utf-8"></script>
 <script>
-
 const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let T={type:'reading',title:'Reading Test – 3 Passages',parts:[''],qs:[],key:{},mins:60,name:'Thí sinh',raw:''},A={},F=new Set(),cur=1,left=0,tick=null,hid=false,notes={},curR=null,audioURL='',nid=null;
 
 /* ---------- Parse ---------- */
-function parseQs(t){const out=[];let c=null,head=[],tf=null,gp=null,gs=null;
- t.split('\n').forEach(l=>{l=l.trim();if(!l)return;
-  if(/^@opts\s/i.test(l)){gp=l.slice(5).trim().split(/\s*\|\s*/).map(s=>{const z=s.match(/^([A-Z])[.)]\s*(.*)$/);return{k:z?z[1]:s,l:z?z[2]:s}});return}
-  if(c&&/^(TRUE|FALSE|NOT GIVEN|YES|NO)$/i.test(l))return;
-  let m=l.match(/^(\d{1,2})[.)]\s*(.*)$/);
-  if(m){const h=head.join('\n');if(gp){gs=gp;gp=null}else if(h)gs=null;if(h)tf=/not given/i.test(h)?(/\byes\b/i.test(h)?['YES','NO','NOT GIVEN']:['TRUE','FALSE','NOT GIVEN']):null;
-   c={n:+m[1],text:m[2],head:h,opts:gs?gs.map(o=>({...o})):tf?tf.map(x=>({k:x,l:x})):[],tf:!gs&&!!tf,sel:!!gs};head=[];out.push(c);return}
-  m=l.match(/^\(?([A-H])[.)]\s+(.*)$/);
-  if(m&&c){if(c.tf){c.opts=[];c.tf=false}c.opts.push({k:m[1],l:m[2]});return}
-  head.push(l)});
- return out}
-function parseRaw(raw){let p='',q='',a='',ex='',ps=[],qt=[];
- const parts=raw.split(/^\s*\[(PASSAGE|QUESTIONS|ANSWERS|EXPLANATIONS)\]\s*$/im);
- if(parts.length>1){for(let i=1;i<parts.length;i+=2){const k=parts[i].toUpperCase(),v=parts[i+1];if(k=='PASSAGE'){ps.push(v.trim());qt.push('')}else{if(!ps.length){ps.push('');qt.push('')}if(k=='QUESTIONS')qt[ps.length-1]+=v+'\n';else if(k=='ANSWERS')a+=v+'\n';else ex+=v+'\n'}}}
- else{const ls=raw.split('\n');let i=ls.findIndex(l=>/^\s*(questions?\s*\d+|\d{1,2}[.)]\s)/i.test(l));if(i<0)i=ls.length;p=ls.slice(0,i).join('\n');q=ls.slice(i).join('\n');ps=[p.trim()];qt=[q]}
- const key={},expl={};a.split('\n').forEach(l=>{const m=l.trim().match(/^(\d{1,2})[.):\s]+(.+)$/);if(m){const pr=m[2].split(/\s+\|\s+/);key[+m[1]]=pr[0].trim();if(pr[1])expl[+m[1]]=pr.slice(1).join(' | ').trim()}});ex.split('\n').forEach(l=>{const m=l.trim().match(/^(\d{1,2})[.):\s]+(.+)$/);if(m)expl[+m[1]]=m[2].trim()});
- const qs=[];qt.forEach((t,i)=>parseQs(t).forEach(x=>{x.part=i;qs.push(x)}));return{ps,qs,key,expl}}
+function parseQs(t){const out=[];let c=null,head=[],tf=null,gp=null,gs=null; t.split('\n').forEach(l=>{l=l.trim();if(!l)return;if(/^@opts\s/i.test(l)){gp=l.slice(5).trim().split(/\s*\|\s*/).map(s=>{const z=s.match(/^([A-Z])[.)]\s*(.*)$/);return{k:z?z[1]:s,l:z?z[2]:s}});return}if(c&&/^(TRUE\vert{}FALSE\vert{}NOT GIVEN\vert{}YES\vert{}NO)$/i.test(l))return;let m=l.match(/^(\d{1,2})[.)]\s*(.*)$/);if(m){const h=head.join('\n');if(gp){gs=gp;gp=null}else if(h)gs=null;if(h)tf=/not given/i.test(h)?(/\byes\b/i.test(h)?['YES','NO','NOT GIVEN']:['TRUE','FALSE','NOT GIVEN']):null;c={n:+m[1],text:m[2],head:h,opts:gs?gs.map(o=>({...o})):tf?tf.map(x=>({k:x,l:x})):[],tf:!gs&&!!tf,sel:!!gs};head=[];out.push(c);return}m=l.match(/^\(?([A-H])[.)]\s+(.*)$/);if(m&&c){if(c.tf){c.opts=[];c.tf=false}c.opts.push({k:m[1],l:m[2]});return}head.push(l)});return out}
+function parseRaw(raw){let p='',q='',a='',ex='',ps=[],qt=[];const parts=raw.split(/^\s*\[(PASSAGE\vert{}QUESTIONS\vert{}ANSWERS\vert{}EXPLANATIONS)\]\s*$/im);if(parts.length>1){for(let i=1;i<parts.length;i+=2){const k=parts[i].toUpperCase(),v=parts[i+1];if(k=='PASSAGE'){ps.push(v.trim());qt.push('')}else{if(!ps.length){ps.push('');qt.push('')}if(k=='QUESTIONS')qt[ps.length-1]+=v+'\n';else if(k=='ANSWERS')a+=v+'\n';else ex+=v+'\n'}}}else{const ls=raw.split('\n');let i=ls.findIndex(l=>/^\s*(questions?\s*\d+|\d{1,2}[.)]\s)/i.test(l));if(i<0)i=ls.length;p=ls.slice(0,i).join('\n');q=ls.slice(i).join('\n');ps=[p.trim()];qt=[q]}const key={},expl={};a.split('\n').forEach(l=>{const m=l.trim().match(/^(\d{1,2})[.):\s]+(.+)$/);if(m){const pr=m[2].split(/\s+\Vert{}\s+/);key[+m[1]]=pr[0].trim();if(pr[1])expl[+m[1]]=pr.slice(1).join(' \vert{} ').trim()}});ex.split('\n').forEach(l=>{const m=l.trim().match(/^(\d{1,2})[.):\s]+(.+)$/);if(m)expl[+m[1]]=m[2].trim()});const qs=[];qt.forEach((t,i)=>parseQs(t).forEach(x=>{x.part=i;qs.push(x)}));return{ps,qs,key,expl}}
 
 /* ---------- Render ---------- */
 function build(){
- $('#who').textContent=T.name;$('#badge').textContent=T.type=='reading'?'Reading':'Listening';
- const au=T.type=='listening'?`<div class="p-4" style="border-bottom:1px solid var(--line);background:var(--bgs)"><audio id="au" preload="auto"></audio><div class="flex items-center gap-3"><button class="btn pri" id="pp" style="width:3rem">▶</button><input id="seek" type="range" min="0" max="100" step="0.1" value="0" class="flex-1"><span id="tm" class="text-sm tabular-nums" style="min-width:6rem">0:00 / 0:00</span></div><div class="flex items-center gap-2 mt-2 text-sm" style="color:var(--mute)">Âm lượng <input id="vol" type="range" min="0" max="1" step="0.05" value="1" style="width:9rem">${audioURL?'':'<span style="color:var(--acc)">Chưa có audio — chọn file:</span> <input type="file" id="afile" accept="audio/*" class="text-xs">'}</div></div>`:'';
- const body=T.parts.map((P,i)=>`<div class="pp" data-i="${i}">${P?P.split(/\n\s*\n/).filter(Boolean).map(x=>`<p>${esc(x)}</p>`).join(''):'<p style="color:var(--mute)">Nghe audio và trả lời các câu hỏi ở bên phải. Bạn có thể bôi đen văn bản để ghi chú.</p>'}</div>`).join(''),tabs=T.parts.length>1?`<div class="flex gap-2 px-6 pt-4">${T.parts.map((_,i)=>`<button class="btn" data-pt="${i}">Passage ${i+1}</button>`).join('')}</div>`:'';
- const body0=T.passage?T.passage.split(/\n\s*\n/).filter(Boolean).map(p=>`<p>${esc(p)}</p>`).join(''):'<p style="color:var(--mute)">Nghe audio và trả lời các câu hỏi ở bên phải. Bạn có thể bôi đen văn bản để ghi chú.</p>';
- $('#left').innerHTML=au+tabs+`<div id="doc" class="doc"><h2>${esc(T.title)}</h2>${body}</div>`;
- if(au)wireAudio();part=-1;showPart(0);
- $('#qs').innerHTML=T.qs.map(q=>`${q.head?`<div class="hd">${esc(q.head)}</div>`:''}<section class="q" id="q${q.n}" data-n="${q.n}"><div class="flex gap-3"><span class="num">${q.n}</span><div class="flex-1"><p class="mb-2">${esc(q.text)}</p>${q.sel?`<select class="ti" data-n="${q.n}"><option value="">Chọn đáp án</option>${q.opts.map(o=>`<option value="${esc(o.k)}">${esc(o.k)}. ${esc(o.l)}</option>`).join('')}</select>`:q.opts.length?q.opts.map(o=>`<label class="op"><input type="radio" name="r${q.n}" value="${esc(o.k)}" data-n="${q.n}"><span>${o.k.length==1?'<b>'+o.k+'</b> ':''}${esc(o.l)}</span></label>`).join(''):`<input class="ti" data-n="${q.n}" autocomplete="off" placeholder="Nhập đáp án">`}</div><button class="fb" data-flag="${q.n}" title="Đánh dấu xem lại (Alt+F)">⚑</button></div></section>`).join('');
- nav()}
-function nav(){
- const done=T.qs.filter(q=>(A[q.n]||'').trim()).length;
- $('#prog').textContent=`${done}/${T.qs.length} đã trả lời · ${F.size} đánh dấu`;
- $('#nav').innerHTML=T.qs.map(q=>`<button class="nb ${(A[q.n]||'').trim()?'ok':''} ${F.has(q.n)?'fl':''} ${q.n==cur?'cu':''}" data-go="${q.n}">${q.n}</button>`).join('');
- document.querySelectorAll('.q').forEach(e=>e.classList.toggle('cur',e.dataset.n==cur));
- document.querySelectorAll('.fb').forEach(e=>e.classList.toggle('on',F.has(+e.dataset.flag)))}
+  let nm='Thí sinh'; try{nm=localStorage.getItem('ielts_name')||'Thí sinh'}catch(e){}
+  $('#who').textContent=`Xin chào, ${nm}`;
+  $('#badge').textContent=T.type=='reading'?'Reading':'Listening';
+  const au=T.type=='listening'?`<div class="p-4" style="border-bottom:1px solid var(--line);background:var(--bgs)"><audio id="au" preload="auto"></audio><div class="flex items-center gap-3"><button class="btn pri" id="pp" style="width:3rem">▶</button><input id="seek" type="range" min="0" max="100" step="0.1" value="0" class="flex-1"><span id="tm" class="text-sm tabular-nums" style="min-width:6rem">0:00 / 0:00</span></div><div class="flex items-center gap-2 mt-2 text-sm" style="color:var(--mute)">Âm lượng <input id="vol" type="range" min="0" max="1" step="0.05" value="1" style="width:9rem">${audioURL?'':'<span style="color:var(--acc)">Chưa có audio — chọn file:</span> <input type="file" id="afile" accept="audio/*" class="text-xs">'}</div></div>`:'';
+  const body=T.parts.map((P,i)=>`<div class="pp" data-i="${i}">${P?P.split(/\n\s*\n/).filter(Boolean).map(x=>`<p>${esc(x)}</p>`).join(''):'<p style="color:var(--mute)">Nghe audio và trả lời các câu hỏi ở bên phải. Bạn có thể bôi đen văn bản để ghi chú.</p>'}</div>`).join(''),tabs=T.parts.length>1?`<div class="flex gap-2 px-6 pt-4">${T.parts.map((_,i)=>`<button class="btn" data-pt="${i}">Passage ${i+1}</button>`).join('')}</div>`:'';
+  $('#left').innerHTML=au+tabs+`<div id="doc" class="doc"><h2>${esc(T.title)}</h2>${body}</div>`;
+  if(au)wireAudio();part=-1;showPart(0);
+  $('#qs').innerHTML=T.qs.map(q=>`${q.head?`<div class="hd">${esc(q.head)}</div>`:''}<section class="q" id="q${q.n}" data-n="${q.n}"><div class="flex gap-3"><span class="num">${q.n}</span><div class="flex-1"><p class="mb-2">${esc(q.text)}</p>${q.sel?`<select class="ti" data-n="${q.n}"><option value="">Chọn đáp án</option>${q.opts.map(o=>`<option value="${esc(o.k)}">${esc(o.k)}. ${esc(o.l)}</option>`).join('')}</select>`:q.opts.length?q.opts.map(o=>`<label class="op"><input type="radio" name="r${q.n}" value="${esc(o.k)}" data-n="${q.n}"><span>${o.k.length==1?'<b>'+o.k+'</b> ':''}${esc(o.l)}</span></label>`).join(''):`<input class="ti" data-n="${q.n}" autocomplete="off" placeholder="Nhập đáp án">`}</div><button class="fb" data-flag="${q.n}" title="Đánh dấu xem lại (Alt+F)">⚑</button></div></section>`).join('');
+  nav();
+}
+function nav(){const done=T.qs.filter(q=>(A[q.n]||'').trim()).length;$('#prog').textContent=`${done}/${T.qs.length} đã trả lời · ${F.size} đánh dấu`;$('#nav').innerHTML=T.qs.map(q=>`<button class="nb ${(A[q.n]||'').trim()?'ok':''} ${F.has(q.n)?'fl':''} ${q.n==cur?'cu':''}" data-go="${q.n}">${q.n}</button>`).join('');document.querySelectorAll('.q').forEach(e=>e.classList.toggle('cur',e.dataset.n==cur));document.querySelectorAll('.fb').forEach(e=>e.classList.toggle('on',F.has(+e.dataset.flag)))}
 function go(n){cur=n;const pq=T.qs.find(x=>x.n==n);if(pq)showPart(pq.part);const e=$('#q'+n);if(e){e.scrollIntoView({behavior:'smooth',block:'center'});const i=e.querySelector('input,select');if(i)i.focus({preventScroll:true})}nav()}
-let part=-1;
-function showPart(i){if(i===part)return;part=i;document.querySelectorAll('.pp').forEach(e=>e.style.display=e.dataset.i==i?'block':'none');document.querySelectorAll('[data-pt]').forEach(b=>b.classList.toggle('pri',b.dataset.pt==i));$('#left').scrollTop=0}
+let part=-1;function showPart(i){if(i===part)return;part=i;document.querySelectorAll('.pp').forEach(e=>e.style.display=e.dataset.i==i?'block':'none');document.querySelectorAll('[data-pt]').forEach(b=>b.classList.toggle('pri',b.dataset.pt==i));$('#left').scrollTop=0}
 $('#left').addEventListener('click',e=>{const b=e.target.closest('[data-pt]');if(b){const q=T.qs.find(x=>x.part==+b.dataset.pt);if(q)go(q.n)}});
 function step(d){const i=T.qs.findIndex(q=>q.n==cur),j=Math.max(0,Math.min(T.qs.length-1,i+d));go(T.qs[j].n)}
 function flag(n){F.has(n)?F.delete(n):F.add(n);nav()}
@@ -188,45 +161,27 @@ $('#qs').addEventListener('input',e=>{const n=e.target.dataset.n;if(n){A[n]=e.ta
 $('#qs').addEventListener('focusin',e=>{const n=e.target.dataset.n;if(n&&cur!=n){cur=+n;const pq=T.qs.find(x=>x.n==cur);if(pq)showPart(pq.part);nav()}});
 $('#qs').addEventListener('click',e=>{const b=e.target.closest('[data-flag]');if(b)flag(+b.dataset.flag)});
 $('#prev').onclick=()=>step(-1);$('#next').onclick=()=>step(1);
-addEventListener('keydown',e=>{if(!e.altKey||!T.qs.length)return;
- if(e.key=='ArrowRight'){e.preventDefault();step(1)}else if(e.key=='ArrowLeft'){e.preventDefault();step(-1)}else if(e.key.toLowerCase()=='f'){e.preventDefault();flag(cur)}});
+addEventListener('keydown',e=>{if(!e.altKey||!T.qs.length)return;if(e.key=='ArrowRight'){e.preventDefault();step(1)}else if(e.key=='ArrowLeft'){e.preventDefault();step(-1)}else if(e.key.toLowerCase()=='f'){e.preventDefault();flag(cur)}});
 
 /* ---------- Audio ---------- */
-function wireAudio(){const a=$('#au');a.src=audioURL;const af=$('#afile');if(af)af.onchange=e=>{const f=e.target.files[0];if(f){audioURL=URL.createObjectURL(f);a.src=audioURL}};
- const f=s=>isFinite(s)?Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0'):'0:00';
- $('#pp').onclick=()=>a.paused?a.play():a.pause();
- a.onplay=()=>$('#pp').textContent='❚❚';a.onpause=()=>$('#pp').textContent='▶';
- a.ontimeupdate=a.onloadedmetadata=()=>{$('#seek').value=a.duration?a.currentTime/a.duration*100:0;$('#tm').textContent=f(a.currentTime)+' / '+f(a.duration)};
- $('#seek').oninput=e=>{if(a.duration)a.currentTime=e.target.value/100*a.duration};
- $('#vol').oninput=e=>a.volume=e.target.value}
+function wireAudio(){const a=$('#au');a.src=audioURL;const af=$('#afile');if(af)af.onchange=e=>{const f=e.target.files[0];if(f){audioURL=URL.createObjectURL(f);a.src=audioURL}};const f=s=>isFinite(s)?Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0'):'0:00';$('#pp').onclick=()=>a.paused?a.play():a.pause();a.onplay=()=>$('#pp').textContent='❚❚';a.onpause=()=>$('#pp').textContent='▶';a.ontimeupdate=a.onloadedmetadata=()=>{$('#seek').value=a.duration?a.currentTime/a.duration*100:0;$('#tm').textContent=f(a.currentTime)+' / '+f(a.duration)};$('#seek').oninput=e=>{if(a.duration)a.currentTime=e.target.value/100*a.duration};$('#vol').oninput=e=>a.volume=e.target.value}
 
 /* ---------- Highlight & Notes ---------- */
-function wrapRange(r,cls,id){const w=document.createTreeWalker($('#doc'),NodeFilter.SHOW_TEXT),ns=[];
- while(w.nextNode()){const n=w.currentNode;if(r.intersectsNode(n)&&n.nodeValue.trim())ns.push(n)}
- ns.forEach(n=>{let s=0,e=n.length;if(n===r.startContainer)s=r.startOffset;if(n===r.endContainer)e=r.endOffset;if(s>=e)return;
-  const t=n.splitText(s);t.splitText(e-s);const m=document.createElement('mark');m.className=cls;if(id)m.dataset.id=id;t.parentNode.insertBefore(m,t);m.appendChild(t)})}
+function wrapRange(r,cls,id){const w=document.createTreeWalker($('#doc'),NodeFilter.SHOW_TEXT),ns=[];while(w.nextNode()){const n=w.currentNode;if(r.intersectsNode(n)&&n.nodeValue.trim())ns.push(n)}ns.forEach(n=>{let s=0,e=n.length;if(n===r.startContainer)s=r.startOffset;if(n===r.endContainer)e=r.endOffset;if(s>=e)return;const t=n.splitText(s);t.splitText(e-s);const m=document.createElement('mark');m.className=cls;if(id)m.dataset.id=id;t.parentNode.insertBefore(m,t);m.appendChild(t)})}
 function clearR(r){[...$('#doc').querySelectorAll('mark')].filter(m=>r.intersectsNode(m)).forEach(m=>{delete notes[m.dataset.id];m.replaceWith(...m.childNodes)})}
-const tb=$('#tb');
-function showTb(x,y){tb.style.left=Math.max(8,Math.min(x,innerWidth-330))+'px';tb.style.top=Math.max(8,y)+'px';tb.style.display='flex'}
-function hideTb(){tb.style.display='none'}
+const tb=$('#tb');function showTb(x,y){tb.style.left=Math.max(8,Math.min(x,innerWidth-330))+'px';tb.style.top=Math.max(8,y)+'px';tb.style.display='flex'}function hideTb(){tb.style.display='none'}
 document.addEventListener('mousedown',e=>{if(!e.target.closest('#tb'))hideTb();if(!e.target.closest('#np')&&!e.target.closest('mark.nt'))$('#np').style.display='none'});
-$('#left').addEventListener('mouseup',e=>setTimeout(()=>{const s=getSelection();
- if(s.rangeCount&&!s.isCollapsed&&$('#doc')&&$('#doc').contains(s.anchorNode)){curR=s.getRangeAt(0).cloneRange();const r=curR.getBoundingClientRect();showTb(r.left+r.width/2-150,r.top-46)}},0));
+$('#left').addEventListener('mouseup',e=>setTimeout(()=>{const s=getSelection();if(s.rangeCount&&!s.isCollapsed&&$('#doc')&&$('#doc').contains(s.anchorNode)){curR=s.getRangeAt(0).cloneRange();const r=curR.getBoundingClientRect();showTb(r.left+r.width/2-150,r.top-46)}},0));
 $('#left').addEventListener('contextmenu',e=>{const s=getSelection();if(s.rangeCount&&!s.isCollapsed&&$('#doc').contains(s.anchorNode)){e.preventDefault();curR=s.getRangeAt(0).cloneRange();showTb(e.clientX,e.clientY)}});
 tb.addEventListener('mousedown',e=>e.preventDefault());
-tb.addEventListener('click',e=>{const a=e.target.closest('button')?.dataset.a;if(!a||!curR)return;
- if(a=='c')clearR(curR);
- else if(a=='n'){const id='n'+Date.now(),rc=curR.getBoundingClientRect();wrapRange(curR,'nt',id);notes[id]='';openNote(id,rc)}
- else wrapRange(curR,a);
- getSelection().removeAllRanges();hideTb()});
-function openNote(id,rc){nid=id;const np=$('#np');np.style.display='block';np.style.left=Math.max(8,Math.min(rc.left,innerWidth-290))+'px';np.style.top=Math.min(rc.bottom+8,innerHeight-190)+'px';$('#nt').value=notes[id]||'';$('#nt').focus()}
-$('#nt').oninput=e=>notes[nid]=e.target.value;
-$('#nclose').onclick=()=>$('#np').style.display='none';
+tb.addEventListener('click',e=>{const a=e.target.closest('button')?.dataset.a;if(!a||!curR)return;if(a=='c')clearR(curR);else if(a=='n'){const id='n'+Date.now(),rc=curR.getBoundingClientRect();wrapRange(curR,'nt',id);notes[id]='';openNote(id,rc)}else wrapRange(curR,a);getSelection().removeAllRanges();hideTb()});
+function openNote(id,rc){nid=id;const np=$('#np');np.style.display='block';np.style.left=Math.max(8,Math.min(rc.left,innerWidth-290))+'px';np.style.top=Math.min(rc.bottom+8,innerHeight-190)+'px';$('#nt').value=notes[id]\vert{}\vert{}'';$('#nt').focus()}
+$('#nt').oninput=e=>notes[nid]=e.target.value;$('#nclose').onclick=()=>$('#np').style.display='none';
 $('#ndel').onclick=()=>{document.querySelectorAll(`mark[data-id="${nid}"]`).forEach(m=>m.replaceWith(...m.childNodes));delete notes[nid];$('#np').style.display='none'};
 $('#left').addEventListener('click',e=>{const m=e.target.closest('mark.nt');if(m)openNote(m.dataset.id,m.getBoundingClientRect())});
 
 /* ---------- Timer ---------- */
-function paint(){$('#clock').textContent=hid?'••:••':String(Math.floor(left/60)).padStart(2,'0')+':'+String(left%60).padStart(2,'0');$('#clock').style.color=left<300&&left>0?'var(--acc)':'inherit'}
+function paint(){$('#clock').textContent=hid?'••:••':String(Math.floor(left/60)).padStart(2,'0')+':'+String(left\%60).padStart(2,'0');$('#clock').style.color=left<300&&left>0?'var(--acc)':'inherit'}
 function startTimer(){clearInterval(tick);left=T.mins*60;paint();tick=setInterval(()=>{left--;paint();if(left<=0){submit(true)}},1000)}
 $('#tg').onclick=()=>{hid=!hid;$('#tg').textContent=hid?'Hiện giờ':'Ẩn giờ';paint()};
 $('#theme').onclick=()=>{const r=document.documentElement,d=r.dataset.theme?r.dataset.theme=='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=d?'light':'dark';try{localStorage.setItem('ielts_theme',r.dataset.theme)}catch(e){}};
@@ -235,93 +190,118 @@ try{const t=localStorage.getItem('ielts_theme');if(t)document.documentElement.da
 /* ---------- Dialogs ---------- */
 function dlg(h){$('#dlg').innerHTML=`<div class="box">${h}</div>`;$('#dlg').style.display='flex'}
 function closeDlg(){$('#dlg').style.display='none'}
-function openSettings(first){
- dlg(`<h2 class="text-xl font-semibold mb-4">Cài đặt đề thi</h2>
- <div class="grid grid-cols-4 gap-3 mb-3"><label class="f col-span-2">Tên thí sinh<input id="sn"></label><label class="f">Phần thi<select id="st"><option value="reading">Reading</option><option value="listening">Listening</option></select></label><label class="f">Thời gian (phút)<input id="sm" type="number" min="1"></label></div>
- <label class="f mb-3">Tiêu đề đề thi<input id="sti"></label>
- <div class="grid grid-cols-2 gap-3 mb-3"><label class="f">File audio (cho Listening)<input id="saf" type="file" accept="audio/*"></label><label class="f">hoặc URL audio<input id="sau" placeholder="https://.../audio.mp3"></label></div>
- <label class="f">Dán đề thi — dùng các dòng [PASSAGE], [QUESTIONS], [ANSWERS], [EXPLANATIONS] (tùy chọn). Giải thích có thể viết ngay sau đáp án, ví dụ "1. TRUE | lý do...", hoặc đặt trong [EXPLANATIONS]. Nếu không có nhãn, văn bản trước câu hỏi đầu tiên sẽ là passage. Mỗi câu bắt đầu bằng "1." và đáp án trắc nghiệm bằng "A.", "B."...<textarea id="sr" rows="11"></textarea></label>
- <p id="se" class="text-sm mt-2" style="color:var(--acc)"></p>
- <div class="flex gap-2 mt-3"><button class="btn" id="sgen">Tạo mã để thêm vào thư viện</button><span class="flex-1"></span>${first?'':'<button class="btn" id="sc">Đóng</button>'}<button class="btn pri" id="go">Bắt đầu thi</button></div>`);
- const fill=()=>{$('#sn').value=T.name;$('#st').value=T.type;$('#sm').value=T.mins;$('#sti').value=T.title;$('#sr').value=T.raw};fill();
- if(!first)$('#sc').onclick=openLib;
- $('#sgen').onclick=()=>{const raw=$('#sr').value,r=parseRaw(raw);
-  if(!r.qs.length){$('#se').textContent='Chưa nhận diện được câu hỏi nào.';return}
-  const title=$('#sti').value||'IELTS Practice Test',type=$('#st').value,mins=+$('#sm').value||60;
-  T.raw=raw;T.title=title;T.type=type;T.mins=mins;
-  const id=(title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'test')+'-'+Date.now().toString(36);
-  const e2=s=>s.replace(/\\/g,'\\\\').replace(/`/g,'\\`').replace(/\$\{/g,'\\${');
-  const code="  {id:"+JSON.stringify(id)+",title:"+JSON.stringify(title)+",type:"+JSON.stringify(type)+",mins:"+mins+",raw:`"+e2(raw)+"`},";
-  dlg(`<h2 class="text-xl font-semibold mb-2">Mã đề để thêm vào thư viện</h2><p class="mb-3" style="color:var(--mute)">Bấm Copy, mở file tests.js, dán vào ngay trước dấu ] ở cuối file, lưu lại rồi tải lại lên Netlify. Nếu là đề Listening có audio, thêm audio:'ten-file.mp3' vào trong dấu {}.</p><textarea id="gc" rows="12" class="ti" readonly></textarea><div class="flex gap-2 mt-3"><button class="btn" id="gb">Quay lại</button><span class="flex-1"></span><button class="btn pri" id="gcopy">Copy</button></div>`);
-  $('#gc').value=code;
-  $('#gcopy').onclick=()=>{$('#gc').select();try{navigator.clipboard.writeText(code)}catch(e){document.execCommand('copy')}$('#gcopy').textContent='Đã copy'};
-  $('#gb').onclick=()=>openSettings(false)};
- $('#go').onclick=()=>{const raw=$('#sr').value,r=parseRaw(raw);
-  if(!r.qs.length){$('#se').textContent='Không tìm thấy câu hỏi. Mỗi câu hỏi cần bắt đầu bằng số và dấu chấm, ví dụ "1. ...".';return}
-  const f=$('#saf').files[0];if(f)audioURL=URL.createObjectURL(f);else if($('#sau').value.trim())audioURL=$('#sau').value.trim();
-  T={type:$('#st').value,title:$('#sti').value||'IELTS Practice Test',parts:r.ps,qs:r.qs,key:r.key,expl:r.expl,mins:+$('#sm').value||60,name:$('#sn').value||'Thí sinh',raw};
-  A={};F=new Set();notes={};cur=r.qs[0].n;sent=false;$('#sub').textContent='Nộp bài';
-  try{localStorage.setItem('ielts_raw2',JSON.stringify({raw,type:T.type,title:T.title,mins:T.mins,name:T.name}))}catch(e){}
-  build();closeDlg();startTimer()}}
+
+$('#homeBtn').onclick = () => openLib();
 $('#set').onclick=()=>openLib();
 
 /* ---------- Submit ---------- */
-$('#sub').onclick=()=>{if(sent){showResult();return}const un=T.qs.filter(q=>!(A[q.n]||'').trim()).length;
- dlg(`<h2 class="text-xl font-semibold mb-2">Nộp bài?</h2><p class="mb-4">Bạn còn <b>${un}</b> câu chưa trả lời và <b>${F.size}</b> câu đang đánh dấu xem lại. Sau khi nộp, bạn không thể sửa đáp án.</p><div class="flex justify-end gap-2"><button class="btn" id="no">Tiếp tục làm bài</button><button class="btn pri" id="yes">Nộp bài</button></div>`);
- $('#no').onclick=closeDlg;$('#yes').onclick=()=>submit(false)};
+$('#sub').onclick=()=>{if(sent){showResult();return}const un=T.qs.filter(q=>!(A[q.n]||'').trim()).length;dlg(`<h2 class="text-xl font-semibold mb-2">Nộp bài?</h2><p class="mb-4">Bạn còn <b>${un}</b> câu chưa trả lời và <b>${F.size}</b> câu đang đánh dấu xem lại. Sau khi nộp, bạn không thể sửa đáp án.</p><div class="flex justify-end gap-2"><button class="btn" id="no">Tiếp tục làm bài</button><button class="btn pri" id="yes">Nộp bài</button></div>`);$('#no').onclick=closeDlg;$('#yes').onclick=()=>submit(false)};
 let sent=false,sentAuto=false;
-function submit(auto){clearInterval(tick);sent=true;sentAuto=auto;$('#sub').textContent='Xem kết quả';document.querySelectorAll('#qs input,#qs select').forEach(i=>i.disabled=true);annotate();showResult()}
-function annotate(){
- const norm=s=>String(s||'').toLowerCase().replace(/\s+/g,' ').trim(),E=T.expl||{},hasKey=Object.keys(T.key).length>0,qs=$('#qs');
- qs.classList.remove('hide-rans','show-rex');
- T.qs.forEach(q=>{const c=$('#q'+q.n),u=A[q.n]||'',k=T.key[q.n],ex=E[q.n],ok=k&&k.split('/').some(x=>norm(x)==norm(u));
-  if(hasKey)c.classList.add(ok?'rok':'rbad');
-  c.insertAdjacentHTML('beforeend',`<div class="rv">${hasKey?`<b style="color:${ok?'var(--ok)':'var(--acc)'}">${ok?'Đúng':'Sai'}</b><span class="rans"> · Đáp án đúng: <b>${esc(k||'')}</b></span>`:''}${ex?`<button class="btn" data-rex="${q.n}" style="padding:.1rem .6rem;margin-left:.5rem">Giải thích</button><div class="rex" id="rex${q.n}">${esc(ex)}</div>`:''}</div>`)});
- qs.insertAdjacentHTML('afterbegin',`<div class="flex gap-2 mb-3">${hasKey?'<button class="btn" id="qa">Ẩn đáp án</button>':''}${Object.keys(E).length?'<button class="btn" id="qe">Hiện tất cả giải thích</button>':''}</div>`)}
-$('#qs').addEventListener('click',e=>{const t=e.target,b=t.closest('[data-rex]');if(b)$('#rex'+b.dataset.rex).classList.toggle('open');
- if(t.id=='qa'){const h=$('#qs').classList.toggle('hide-rans');t.textContent=h?'Hiện đáp án':'Ẩn đáp án'}
- if(t.id=='qe'){const s=$('#qs').classList.toggle('show-rex');t.textContent=s?'Ẩn tất cả giải thích':'Hiện tất cả giải thích'}});
-function showResult(){const auto=sentAuto;
- const norm=s=>String(s||'').toLowerCase().replace(/\s+/g,' ').trim(),hasKey=Object.keys(T.key).length>0;let sc=0;
- const rows=T.qs.map(q=>{const u=A[q.n]||'',k=T.key[q.n],ok=k&&k.split('/').some(x=>norm(x)==norm(u));if(ok)sc++;
-  return `<tr><td>${q.n}</td><td>${esc(u)||'<i style="color:var(--mute)">(trống)</i>'}</td>${hasKey?`<td class="ca">${esc(k||'')}</td><td style="color:${ok?'var(--ok)':'var(--acc)'}">${ok?'Đúng':'Sai'}</td>`:''}<td>${(T.expl||{})[q.n]?`<button class="btn" data-ex="${q.n}">Giải thích</button>`:''}</td></tr>${(T.expl||{})[q.n]?`<tr class="ex" id="ex${q.n}"><td></td><td colspan="4" style="background:var(--bgs)">${esc(T.expl[q.n])}</td></tr>`:''}`}).join('');
- if(T.id&&hasKey){try{const h=JSON.parse(localStorage.getItem('ielts_hist')||'{}');h[T.id]={sc,n:T.qs.length,d:new Date().toLocaleDateString('vi-VN')};localStorage.setItem('ielts_hist',JSON.stringify(h))}catch(e){}}
- dlg(`<div class="flex items-center gap-3 mb-1">${ICON(hasKey&&sc/T.qs.length<.5?'daisy':'sunflower',56)}<h2 class="text-xl font-semibold">${auto?'Hết giờ — bài đã được nộp':'Đã nộp bài'}</h2></div><p class="mb-4" style="color:var(--mute)">${esc(T.name)} · ${esc(T.title)}</p>${hasKey?`<p class="text-3xl font-semibold mb-4">${sc} / ${T.qs.length} câu đúng</p>`:'<p class="mb-4">Đề chưa có phần [ANSWERS] nên không chấm điểm tự động.</p>'}<div class="flex gap-2 mb-3">${hasKey?'<button class="btn" id="tans">Ẩn đáp án</button>':''}${Object.keys(T.expl||{}).length?'<button class="btn" id="tex">Hiện tất cả giải thích</button>':''}</div><table><tr><th>Câu</th><th>Bạn trả lời</th>${hasKey?'<th class="ca">Đáp án</th><th>Kết quả</th>':''}<th></th></tr>${rows}</table><div class="flex gap-2 mt-4"><button class="btn" id="review">Xem lại đề</button><span class="flex-1"></span><button class="btn pri" id="again">Làm đề khác</button></div>`);
- const bx=$('#dlg .box');bx.onclick=e=>{const b=e.target.closest('[data-ex]');if(b)$('#ex'+b.dataset.ex).classList.toggle('open')};
- if($('#tans'))$('#tans').onclick=()=>{bx.classList.toggle('hide-ans');$('#tans').textContent=bx.classList.contains('hide-ans')?'Hiện đáp án':'Ẩn đáp án'};
- if($('#tex'))$('#tex').onclick=()=>{bx.classList.toggle('showex');$('#tex').textContent=bx.classList.contains('showex')?'Ẩn tất cả giải thích':'Hiện tất cả giải thích'};
- $('#review').onclick=closeDlg;$('#again').onclick=()=>openLib()}
+function submit(auto){
+  clearInterval(tick);sent=true;sentAuto=auto;$('#sub').textContent='Xem kết quả';
+  document.querySelectorAll('#qs input,#qs select').forEach(i=>i.disabled=true);
+  
+  // Lưu thời gian tham gia làm bài (tính số phút đã bỏ ra)
+  try{
+    const spentMins = Math.max(1, Math.round((T.mins*60 - left)/60));
+    const times = JSON.parse(localStorage.getItem('ielts_times')||'[]');
+    times.push({title: T.title, mins: spentMins, date: new Date().toLocaleDateString('vi-VN')});
+    localStorage.setItem('ielts_times', JSON.stringify(times));
+  }catch(e){}
+
+  annotate();showResult();
+}
+function annotate(){const norm=s=>String(s||'').toLowerCase().replace(/\s+/g,' ').trim(),E=T.expl||{},hasKey=Object.keys(T.key).length>0,qs=$('#qs');qs.classList.remove('hide-rans','show-rex');T.qs.forEach(q=>{const c=$('#q'+q.n),u=A[q.n]||'',k=T.key[q.n],ex=E[q.n],ok=k&&k.split('/').some(x=>norm(x)==norm(u));if(hasKey)c.classList.add(ok?'rok':'rbad');c.insertAdjacentHTML('beforeend',`<div class="rv">${hasKey?`<b style="color:${ok?'var(--ok)':'var(--acc)'}">${ok?'Đúng':'Sai'}</b><span class="rans"> · Đáp án đúng: <b>${esc(k||'')}</b></span>`:''}${ex?`<button class="btn" data-rex="${q.n}" style="padding:.1rem .6rem;margin-left:.5rem">Giải thích</button><div class="rex" id="rex${q.n}">${esc(ex)}</div>`:''}</div>`)});qs.insertAdjacentHTML('afterbegin',`<div class="flex gap-2 mb-3">${hasKey?'<button class="btn" id="qa">Ẩn đáp án</button>':''}${Object.keys(E).length?'<button class="btn" id="qe">Hiện tất cả giải thích</button>':''}</div>`)}
+$('#qs').addEventListener('click',e=>{const t=e.target,b=t.closest('[data-rex]');if(b)$('#rex'+b.dataset.rex).classList.toggle('open');if(t.id=='qa'){const h=$('#qs').classList.toggle('hide-rans');t.textContent=h?'Hiện đáp án':'Ẩn đáp án'}if(t.id=='qe'){const s=$('#qs').classList.toggle('show-rex');t.textContent=s?'Ẩn tất cả giải thích':'Hiện tất cả giải thích'}});
+function showResult(){const auto=sentAuto;const norm=s=>String(s||'').toLowerCase().replace(/\s+/g,' ').trim(),hasKey=Object.keys(T.key).length>0;let sc=0;const rows=T.qs.map(q=>{const u=A[q.n]||'',k=T.key[q.n],ok=k&&k.split('/').some(x=>norm(x)==norm(u));if(ok)sc++;return `<tr><td>${q.n}</td><td>${esc(u)||'<i style="color:var(--mute)">(trống)</i>'}</td>${hasKey?`<td class="ca">${esc(k||'')}</td><td style="color:${ok?'var(--ok)':'var(--acc)'}">${ok?'Đúng':'Sai'}</td>`:''}<td>${(T.expl||{})[q.n]?`<button class="btn" data-ex="${q.n}">Giải thích</button>`:''}</td></tr>${(T.expl||{})[q.n]?`<tr class="ex" id="ex${q.n}"><td></td><td colspan="4" style="background:var(--bgs)">${esc(T.expl[q.n])}</td></tr>`:''}`}).join('');if(T.id&&hasKey){try{const h=JSON.parse(localStorage.getItem('ielts_hist')||'{}');h[T.id]={sc,n:T.qs.length,d:new Date().toLocaleDateString('vi-VN')};localStorage.setItem('ielts_hist',JSON.stringify(h))}catch(e){}}dlg(`<div class="flex items-center gap-3 mb-1">${ICON(hasKey&&sc/T.qs.length<.5?'daisy':'sunflower',56)}<h2 class="text-xl font-semibold">${auto?'Hết giờ — bài đã được nộp':'Đã nộp bài'}</h2></div><p class="mb-4" style="color:var(--mute)">${esc(T.name)} · ${esc(T.title)}</p>${hasKey?`<p class="text-3xl font-semibold mb-4">${sc} /${T.qs.length} câu đúng</p>`:'<p class="mb-4">Đề chưa có phần [ANSWERS] nên không chấm điểm tự động.</p>'}<div class="flex gap-2 mb-3">${hasKey?'<button class="btn" id="tans">Ẩn đáp án</button>':''}${Object.keys(T.expl||{}).length?'<button class="btn" id="tex">Hiện tất cả giải thích</button>':''}</div><table><tr><th>Câu</th><th>Bạn trả lời</th>${hasKey?'<th class="ca">Đáp án</th><th>Kết quả</th>':''}<th></th></tr>${rows}</table><div class="flex gap-2 mt-4"><button class="btn" id="review">Xem lại đề</button><span class="flex-1"></span><button class="btn pri" id="again">Trang chủ / Làm đề khác</button></div>`);const bx=$('#dlg .box');bx.onclick=e=>{const b=e.target.closest('[data-ex]');if(b)$('#ex'+b.dataset.ex).classList.toggle('open')};if($('#tans'))$('#tans').onclick=()=>{bx.classList.toggle('hide-ans');$('#tans').textContent=bx.classList.contains('hide-ans')?'Hiện đáp án':'Ẩn đáp án'};if($('#tex'))$('#tex').onclick=()=>{bx.classList.toggle('showex');$('#tex').textContent=bx.classList.contains('showex')?'Ẩn tất cả giải thích':'Hiện tất cả giải thích'};$('#review').onclick=closeDlg;$('#again').onclick=()=>openLib()}
 
 /* ---------- Library ---------- */
 let LIB=Array.isArray(window.TESTS)?window.TESTS:[];
 function hist(){try{return JSON.parse(localStorage.getItem('ielts_hist')||'{}')}catch(e){return{}}}
 function begin(x,nm){const r=parseRaw(x.raw);audioURL=x.audio||'';T={id:x.id,type:x.type,title:x.title,parts:r.ps,qs:r.qs,key:r.key,expl:r.expl,mins:x.mins,name:nm,raw:x.raw};A={};F=new Set();notes={};cur=r.qs[0].n;sent=false;$('#sub').textContent='Nộp bài';build();closeDlg();startTimer()}
-const ICON=(k,sz)=>{
- const pet=(n,rx,ry,off,fill)=>Array.from({length:n},(_,i)=>`<ellipse cx="32" cy="${32-off}" rx="${rx}" ry="${ry}" fill="${fill}" transform="rotate(${i*360/n} 32 32)"/>`).join('');
- const S='stroke="#6b4a5a" stroke-opacity=".22" stroke-width="1"';
- const D={
- sakura:`<g ${S}>${pet(5,9,12,12,'#ffb7cd')}</g><circle cx="32" cy="32" r="6" fill="#ffe27a"/><g fill="#e8836f"><circle cx="32" cy="27" r="1.2"/><circle cx="36" cy="31" r="1.2"/><circle cx="34" cy="36" r="1.2"/><circle cx="29" cy="36" r="1.2"/><circle cx="28" cy="31" r="1.2"/></g>`,
- daisy:`<g ${S}>${pet(8,5,11,13,'#ffffff')}</g><circle cx="32" cy="32" r="8" fill="#ffd54a"/><circle cx="32" cy="32" r="4" fill="#ffb300" opacity=".5"/>`,
- sunflower:`<g ${S}>${pet(12,4.5,10,14,'#ffd23f')}</g><circle cx="32" cy="32" r="9.5" fill="#8a5a3c"/><circle cx="32" cy="32" r="5" fill="#6b4328"/>`,
- tulip:`<path d="M32 60V36" stroke="#6bbf8a" stroke-width="3" stroke-linecap="round"/><path d="M32 54c-8-2-12-8-13-14 7 1 12 6 13 14z" fill="#8fd3a8"/><path d="M32 50c7-2 11-7 12-12-6 1-11 5-12 12z" fill="#8fd3a8"/><g ${S}><path d="M18 14c0 14 6 24 14 24s14-10 14-24l-7 6-7-9-7 9z" fill="#ff8fb0"/><path d="M25 20l7-9 7 9c-1 10-4 17-7 17s-6-7-7-17z" fill="#ffb7cd"/></g>`,
- rainbow:`<g fill="none" stroke-width="4.5" stroke-linecap="round"><path d="M8 44a24 24 0 0 1 48 0" stroke="#ff9fb8"/><path d="M14 44a18 18 0 0 1 36 0" stroke="#ffd98a"/><path d="M20 44a12 12 0 0 1 24 0" stroke="#a6e3c3"/></g><g fill="#fff" ${S}><circle cx="12" cy="46" r="6"/><circle cx="19" cy="48" r="5"/><circle cx="52" cy="46" r="6"/><circle cx="45" cy="48" r="5"/></g>`,
- butterfly:`<g ${S}><ellipse cx="21" cy="25" rx="13" ry="11" fill="#ffb7cd" transform="rotate(-20 21 25)"/><ellipse cx="43" cy="25" rx="13" ry="11" fill="#ffb7cd" transform="rotate(20 43 25)"/><ellipse cx="23" cy="42" rx="9" ry="8" fill="#cfe3ff" transform="rotate(20 23 42)"/><ellipse cx="41" cy="42" rx="9" ry="8" fill="#cfe3ff" transform="rotate(-20 41 42)"/></g><rect x="30" y="18" width="4" height="30" rx="2" fill="#6b4a5a"/><path d="M31 18q-4-8-8-9M33 18q4-8 8-9" stroke="#6b4a5a" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="22" cy="24" r="3" fill="#fff" opacity=".7"/><circle cx="42" cy="24" r="3" fill="#fff" opacity=".7"/>`
- };
- return `<svg viewBox="0 0 64 64" width="${sz}" height="${sz}" aria-hidden="true">${D[k]||D.sakura}</svg>`};
-function openLib(){const H=hist();let nm='';try{nm=localStorage.getItem('ielts_name')||''}catch(e){}
- const PAL=[['#ffd6e0','#6e2a40'],['#d6ecff','#234a68'],['#d9f5e6','#1f5239'],['#fff1c9','#614b12'],['#e6dcff','#41316f'],['#ffe0cc','#6f3d20']],KINDS=['sakura','daisy','tulip','sunflower','rainbow','butterfly'];
- const sec=(type,label)=>{const it=LIB.map((x,i)=>({x,i})).filter(o=>o.x.type==type);
-  return `<section class="lsec" data-t="${type}"><h3>${label}<span>${it.length} đề</span></h3><div class="lgrid">${it.length?it.map(o=>{const p=PAL[o.i%PAL.length],h=H[o.x.id],n=parseRaw(o.x.raw).qs.length;
-   return `<button class="tile" data-lib="${o.i}" style="background:${p[0]};color:${p[1]}">${ICON(KINDS[o.i%KINDS.length],46)}<b>${esc(o.x.title)}</b><span><small>${n} câu · ${o.x.mins} phút</small>${h?`<em>Gần nhất: ${h.sc}/${h.n}</em>`:''}</span></button>`}).join(''):'<p class="lempty">Chưa có đề nào 🌸</p>'}</div></section>`};
- dlg(`<div class="flex items-center gap-4 mb-3"><div class="mascot flex items-end">${ICON('tulip',52)}${ICON('sakura',78)}${ICON('daisy',52)}</div><div><h2 class="text-2xl font-semibold mb-1">Thư viện đề thi IELTS</h2><p style="color:var(--mute)">Chọn một ô để làm bài nhé! ✨ Kết quả chỉ được lưu trên trình duyệt của bạn.</p></div></div><label class="f mb-4">Tên thí sinh<input id="ln" value="${esc(nm)}" placeholder="Nhập tên của bạn"></label>${sec('reading','📖 Reading')}${sec('listening','🎧 Listening')}<div class="flex justify-between mt-2"><span class="flex gap-2"><button class="btn" id="lcustom">Dán đề của riêng bạn</button></span>${sent||T.qs.length?'<button class="btn" id="lclose">Đóng</button>':''}</div>`);
- $('#dlg .box').style.maxWidth='58rem';
- $('#dlg .box').onclick=e=>{const b=e.target.closest('[data-lib]');if(!b)return;const x=LIB[+b.dataset.lib],nm=($('#ln').value||'').trim()||'Thí sinh';try{localStorage.setItem('ielts_name',nm)}catch(e){}begin(x,nm)};
- $('#lcustom').onclick=()=>openSettings(false);if($('#lclose'))$('#lclose').onclick=closeDlg}
+
+const ICON=(k,sz)=>{const pet=(n,rx,ry,off,fill)=>Array.from({length:n},(_,i)=>`<ellipse cx="32" cy="${32-off}" rx="${rx}" ry="${ry}" fill="${fill}" transform="rotate(${i*360/n} 32 32)"/>`).join('');const S='stroke="#6b4a5a" stroke-opacity=".22" stroke-width="1"';const D={sakura:`<g ${S}>${pet(5,9,12,12,'#ffb7cd')}</g><circle cx="32" cy="32" r="6" fill="#ffe27a"/><g fill="#e8836f"><circle cx="32" cy="27" r="1.2"/><circle cx="36" cy="31" r="1.2"/><circle cx="34" cy="36" r="1.2"/><circle cx="29" cy="36" r="1.2"/><circle cx="28" cy="31" r="1.2"/></g>`,daisy:`<g ${S}>${pet(8,5,11,13,'#ffffff')}</g><circle cx="32" cy="32" r="8" fill="#ffd54a"/><circle cx="32" cy="32" r="4" fill="#ffb300" opacity=".5"/>`,sunflower:`<g ${S}>${pet(12,4.5,10,14,'#ffd23f')}</g><circle cx="32" cy="32" r="9.5" fill="#8a5a3c"/><circle cx="32" cy="32" r="5" fill="#6b4328"/>`,tulip:`<path d="M32 60V36" stroke="#6bbf8a" stroke-width="3" stroke-linecap="round"/><path d="M32 54c-8-2-12-8-13-14 7 1 12 6 13 14z" fill="#8fd3a8"/><path d="M32 50c7-2 11-7 12-12-6 1-11 5-12 12z" fill="#8fd3a8"/><g ${S}><path d="M18 14c0 14 6 24 14 24s14-10 14-24l-7 6-7-9-7 9z" fill="#ff8fb0"/><path d="M25 20l7-9 7 9c-1 10-4 17-7 17s-6-7-7-17z" fill="#ffb7cd"/></g>`,rainbow:`<g fill="none" stroke-width="4.5" stroke-linecap="round"><path d="M8 44a24 24 0 0 1 48 0" stroke="#ff9fb8"/><path d="M14 44a18 18 0 0 1 36 0" stroke="#ffd98a"/><path d="M20 44a12 12 0 0 1 24 0" stroke="#a6e3c3"/></g><g fill="#fff" ${S}><circle cx="12" cy="46" r="6"/><circle cx="19" cy="48" r="5"/><circle cx="52" cy="46" r="6"/><circle cx="45" cy="48" r="5"/></g>`,};return `<svg viewBox="0 0 64 64" width="${sz}" height="${sz}" aria-hidden="true">${D[k]||D.sakura}</svg>`};
+
+function openLib(){
+  const H=hist();let nm='';try{nm=localStorage.getItem('ielts_name')||''}catch(e){}
+  const PAL=[['#ffd6e0','#6e2a40'],['#d6ecff','#234a68'],['#d9f5e6','#1f5239'],['#fff1c9','#614b12'],['#e6dcff','#41316f'],['#ffe0cc','#6f3d20']],KINDS=['sakura','daisy','tulip','sunflower','rainbow'];
+  
+  const sec=(type,label)=>{const it=LIB.map((x,i)=>({x,i})).filter(o=>o.x.type==type);return `<section class="lsec" data-t="${type}"><h3>${label}<span>${it.length} đề</span></h3><div class="lgrid">${it.length?it.map(o=>{const p=PAL[o.i%PAL.length],h=H[o.x.id],n=parseRaw(o.x.raw).qs.length;return `<button class="tile" data-lib="${o.i}" style="background:${p[0]};color:${p[1]}">${ICON(KINDS[o.i%KINDS.length],46)}<b>${esc(o.x.title)}</b><span><small>${n} câu · ${o.x.mins} phút</small>${h?`<em>Gần nhất: ${h.sc}/${h.n}</em>`:''}</span></button>`}).join(''):'<p class="lempty">Chưa có đề nào 🌸</p>'}</div></section>`};
+
+  dlg(`<div class="flex items-center gap-4 mb-3"><div class="mascot flex items-end">${ICON('tulip',52)}${ICON('sakura',78)}${ICON('daisy',52)}</div><div><h2 class="text-2xl font-semibold mb-1">Thư viện đề thi IELTS</h2><p style="color:var(--mute)">Đăng nhập và chọn đề để bắt đầu luyện tập nhé! ✨</p></div></div>
+  
+  <div class="grid grid-cols-2 gap-4 mb-4 bg-white/50 p-3 rounded-xl border border-[var(--line)]">
+    <label class="f">👤 Tên người dùng / Đăng nhập<input id="ln" value="${esc(nm)}" placeholder="Nhập tên của bạn..."></label>
+    <div class="flex items-end"><button class="btn pri" id="saveNameBtn" style="width:100%">Lưu tên đăng nhập</button></div>
+  </div>
+
+  <!-- Thống kê & Biểu đồ -->
+  <div class="mb-5 p-4 rounded-xl bg-white/60 border border-[var(--line)]">
+    <h3 class="font-semibold text-base mb-2">📊 Thống kê học tập của bạn</h3>
+    <div class="grid grid-cols-2 gap-4 mb-3 text-sm">
+      <div>Tổng số đề đã làm: <b id="statTotalTests">0</b> đề</div>
+      <div>Tổng thời gian tham gia: <b id="statTotalHours">0</b> phút</div>
+    </div>
+    <div style="height:140px;position:relative"><canvas id="statsChart"></canvas></div>
+  </div>
+
+  ${sec('reading','📖 Reading')}${sec('listening','🎧 Listening')}
+  <div class="flex justify-between mt-3">
+    <button class="btn" id="lcustom">Dán đề của riêng bạn</button>
+    ${sent||T.qs.length?'<button class="btn" id="lclose">Đóng thư viện</button>':''}
+  </div>`);
+
+  $('#dlg .box').style.maxWidth='60rem';
+
+  // Vẽ biểu đồ cột thống kê thời gian làm đề
+  try{
+    const times = JSON.parse(localStorage.getItem('ielts_times')||'[]');
+    $('#statTotalTests').textContent = times.length;
+    const totalMins = times.reduce((acc,cur)=>acc+cur.mins,0);
+    $('#statTotalHours').textContent = totalMins;
+
+    const ctx = $('#statsChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: times.map((t, i) => `Đề ${i+1}`),
+        datasets: [{
+          label: 'Thời gian làm bài (phút)',
+          data: times.map(t => t.mins),
+          backgroundColor: '#ec7fa3',
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+  }catch(e){}
+
+  $('#saveNameBtn').onclick = () => {
+    const val = ($('#ln').value||'').trim()||'Thí sinh';
+    localStorage.setItem('ielts_name', val);
+    $('#who').textContent = `Xin chào, ${val}`;
+    alert('Đã cập nhật tên đăng nhập thành công!');
+  };
+
+  $('#dlg .box').onclick=e=>{const b=e.target.closest('[data-lib]');if(!b)return;const x=LIB[+b.dataset.lib],nm=($('#ln').value||'').trim()||'Thí sinh';try{localStorage.setItem('ielts_name',nm)}catch(e){}begin(x,nm)};
+  $('#lcustom').onclick=()=>openSettings(false);if($('#lclose'))$('#lclose').onclick=closeDlg;
+}
+
+function openSettings(first){
+  dlg(`<h2 class="text-xl font-semibold mb-4">Cài đặt đề thi</h2> <div class="grid grid-cols-4 gap-3 mb-3"><label class="f col-span-2">Tên thí sinh<input id="sn"></label><label class="f">Phần thi<select id="st"><option value="reading">Reading</option><option value="listening">Listening</option></select></label><label class="f">Thời gian (phút)<input id="sm" type="number" min="1"></label></div> <label class="f mb-3">Tiêu đề đề thi<input id="sti"></label> <div class="grid grid-cols-2 gap-3 mb-3"><label class="f">File audio (cho Listening)<input id="saf" type="file" accept="audio/*"></label><label class="f">hoặc URL audio<input id="sau" placeholder="https://.../audio.mp3"></label></div> <label class="f">Dán đề thi — dùng các dòng [PASSAGE], [QUESTIONS], [ANSWERS]...<textarea id="sr" rows="11"></textarea></label> <p id="se" class="text-sm mt-2" style="color:var(--acc)"></p> <div class="flex gap-2 mt-3"><button class="btn" id="sgen">Tạo mã để thêm vào thư viện</button><span class="flex-1"></span>${first?'':'<button class="btn" id="sc">Đóng</button>'}<button class="btn pri" id="go">Bắt đầu thi</button></div>`);
+  const fill=()=>{$('#sn').value=localStorage.getItem('ielts_name')||'Thí sinh';$('#st').value=T.type;$('#sm').value=T.mins;$('#sti').value=T.title;$('#sr').value=T.raw};fill();
+  if(!first)$('#sc').onclick=openLib;
+  $('#go').onclick=()=>{const raw=$('#sr').value,r=parseRaw(raw);if(!r.qs.length){$('#se').textContent='Không tìm thấy câu hỏi.';return}const f=$('#saf').files[0];if(f)audioURL=URL.createObjectURL(f);else if($('#sau').value.trim())audioURL=$('#sau').value.trim();T={type:$('#st').value,title:$('#sti').value||'IELTS Practice Test',parts:r.ps,qs:r.qs,key:r.key,expl:r.expl,mins:+$('#sm').value\vert{}\vert{}60,name:$('#sn').value||'Thí sinh',raw};A={};F=new Set();notes={};cur=r.qs[0].n;sent=false;$('#sub').textContent='Nộp bài';try{localStorage.setItem('ielts_raw2',JSON.stringify({raw,type:T.type,title:T.title,mins:T.mins,name:T.name}))}catch(e){}build();closeDlg();startTimer()}
+}
 
 /* ---------- Init ---------- */
 try{const s=JSON.parse(localStorage.getItem('ielts_raw2')||'null');if(s)Object.assign(T,s)}catch(e){}
 build();openLib();
-
 </script>
 </body>
 </html>
