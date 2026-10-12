@@ -3,8 +3,8 @@
 // type: 'reading' hoặc 'listening'. mins: số phút. audio: tên file mp3 để cùng thư mục (chỉ Listening, tùy chọn).
 window.TESTS=[
   {id:"listening 3",title:"Listening t3 ( Có ảnh & Audio)",type:"listening",mins:40,
-audioUrl: "https://drive.google.com/drive/folders/1LEsxHcPq3jshst46LmhqfzlE4twR3R_0", 
-imageUrl: "https://github.com/nguyenlinh0906/th-vi-n-ielts//main/A%CC%89nh%20chu%CC%A3p%20ma%CC%80n%20hi%CC%80nh%202026-10-12%20102218.png",
+audioUrl: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+imageUrl: "https://raw.githubusercontent.com/nguyenlinh0906/th-vi-n-ielts/main/A%CC%89nh%20chu%CC%A3p%20ma%CC%80n%20hi%CC%80nh%202026-10-12%20102218.png",
 raw:`[QUESTIONS]
 SECTION 1
 Read the text and answer questions 1–10
