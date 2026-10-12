@@ -856,5 +856,4 @@ Complete the form. Write ONE WORD ONLY.
 2. 07700 900123 | Số điện thoại được đọc từng chữ số.
 3. B | Khách nói sẽ ở hai đêm (two nights).
 4. card | Khách chọn thanh toán bằng thẻ.`},
-];                                                                                                                      
-                                                                                                                          
+];
