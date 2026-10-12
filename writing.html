@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chấm bài IELTS Writing</title>
+  <link rel="stylesheet" href="/writing-feedback.css">
+  <style>
+    body { margin: 0; padding: 24px 16px 64px; background: #fff; font-family: 'Be Vietnam Pro', system-ui, sans-serif; color: #12202f; }
+    form { max-width: 980px; margin: 0 auto 24px; display: grid; gap: 14px; }
+    label { font-weight: 500; font-size: 14px; display: grid; gap: 6px; }
+    select, textarea, button { font: inherit; padding: 10px 12px; border: 1.5px solid #d5dde6; border-radius: 8px; }
+    textarea { resize: vertical; line-height: 1.6; }
+    button[type=submit] { background: #0b6e8a; color: #fff; border-color: #0b6e8a; font-weight: 500; cursor: pointer; justify-self: start; padding-inline: 22px; }
+    button[disabled] { opacity: .6; cursor: wait; }
+    #count { font-size: 13px; color: #5b6b7c; }
+  </style>
+</head>
+<body>
+  <p style="max-width:980px;margin:0 auto 16px"><a href="/index.html">← Về thư viện đề</a></p>
+  <form id="form">
+    <label>Loại bài
+      <select name="task_type">
+        <option value="task2">Task 2 (Essay)</option>
+        <option value="task1">Task 1 (Report / Letter)</option>
+      </select>
+    </label>
+    <label>Đề bài
+      <textarea name="prompt" rows="4" required></textarea>
+    </label>
+    <label>Bài làm của bạn
+      <textarea name="essay" rows="14" required></textarea>
+      <span id="count">0 từ</span>
+    </label>
+    <button type="submit">Chấm bài</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script type="module">
+    import { gradeWriting, renderLoading, renderError, renderResult } from '/writing-feedback.js';
+
+    const form = document.getElementById('form');
+    const result = document.getElementById('result');
+    const essayEl = form.elements.essay;
+    const countEl = document.getElementById('count');
+
+    essayEl.addEventListener('input', () => {
+      countEl.textContent = `${(essayEl.value.match(/[\p{L}\p{N}][\p{L}\p{N}'’-]*/gu) || []).length} từ`;
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type=submit]');
+      btn.disabled = true;
+      renderLoading(result);
+      try {
+        const data = await gradeWriting({
+          taskType: form.elements.task_type.value,
+          prompt: form.elements.prompt.value,
+          essay: essayEl.value,
+        });
+        renderResult(result, data);
+        result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } catch (err) {
+        renderError(result, err.message);
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
